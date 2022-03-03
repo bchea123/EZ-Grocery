@@ -24,7 +24,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String CREATE_TABLE = "CREATE TABLE " + Util.TABLE_NAME + " ("
                 + Util.KEY_ID + " INTEGER PRIMARY KEY, "
                 + Util.KEY_ITEM + " TEXT, "
-                + Util.KEY_QUANTITY + " INTEGER, "
+                + Util.KEY_QUANTITY + " TEXT, "
                 + Util.KEY_DESCRIPTION + " TEXT)";
 
         db.execSQL(CREATE_TABLE);
@@ -88,7 +88,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         GroceryItem groceryItem = new GroceryItem();
         groceryItem.setId(cursor.getInt(0));
         groceryItem.setItemName(cursor.getString(1));
-        groceryItem.setItemQuantity(cursor.getInt(2));
+        groceryItem.setItemQuantity(cursor.getString(2));
         groceryItem.setItemDescription(cursor.getString(3));
 
         cursor.close();
@@ -111,7 +111,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 GroceryItem groceryItem = new GroceryItem();
                 groceryItem.setId(cursor.getInt(0));
                 groceryItem.setItemName(cursor.getString(1));
-                groceryItem.setItemQuantity(cursor.getInt(2));
+                groceryItem.setItemQuantity(cursor.getString(2));
                 groceryItem.setItemDescription(cursor.getString(3));
 
                 //Add grocery item to list

@@ -4,10 +4,10 @@ public class GroceryItem {
 
     private int id;
     private String itemName;
-    private int itemQuantity;
+    private String itemQuantity;
     private String itemDescription;
 
-    public GroceryItem(int id, String itemName, int itemQuantity, String itemDescription) {
+    public GroceryItem(int id, String itemName, String itemQuantity, String itemDescription) {
         this.id = id;
         this.itemName = itemName;
         this.itemQuantity = itemQuantity;
@@ -33,11 +33,11 @@ public class GroceryItem {
         this.itemName = itemName;
     }
 
-    public int getItemQuantity() {
+    public String getItemQuantity() {
         return itemQuantity;
     }
 
-    public void setItemQuantity(int itemQuantity) {
+    public void setItemQuantity(String itemQuantity) {
         this.itemQuantity = itemQuantity;
     }
 

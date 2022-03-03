@@ -92,12 +92,11 @@ public class ListActivity extends AppCompatActivity {
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!itemName.getText().toString().isEmpty()
-                        && !itemQuantity.getText().toString().isEmpty()){
+                if (!itemName.getText().toString().isEmpty()){
                     saveGroceryItem(v);
                 }
                 else{
-                    Snackbar.make(v, "Item field incomplete!", Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(v, "Please enter an item name!", Snackbar.LENGTH_SHORT).show();
                 }
             }
         });
@@ -109,7 +108,7 @@ public class ListActivity extends AppCompatActivity {
 
     public void saveGroceryItem(View view){
         String newName = itemName.getText().toString().trim();
-        int newQuantity = Integer.parseInt(itemQuantity.getText().toString().trim());
+        String newQuantity = itemQuantity.getText().toString().trim();
         String newDescription = itemDescription.getText().toString().trim();
 
         GroceryItem item = new GroceryItem();

@@ -45,7 +45,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         GroceryItem groceryItem = groceryItemList.get(position);
 
         holder.itemName.setText(groceryItem.getItemName());
-        holder.itemQuantity.setText(String.format("Quantity: %s", String.valueOf(groceryItem.getItemQuantity())));
+        if (!groceryItem.getItemQuantity().isEmpty())
+            holder.itemQuantity.setText(String.format("Quantity: %s", String.valueOf(groceryItem.getItemQuantity())));
+        else
+            holder.itemQuantity.setText(null);
         if (!groceryItem.getItemDescription().isEmpty())
             holder.itemDescription.setText(String.format("Description: %s", groceryItem.getItemDescription()));
         else
@@ -131,7 +134,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     DatabaseHelper db = new DatabaseHelper(context);
 
                     newGroceryItem.setItemName(itemNameEdit.getText().toString());
-                    newGroceryItem.setItemQuantity(Integer.parseInt(itemQuantityEdit.getText().toString()));
+                    newGroceryItem.setItemQuantity(itemQuantityEdit.getText().toString());
                     newGroceryItem.setItemDescription(itemDescriptionEdit.getText().toString());
 
                     if (!itemName.getText().toString().isEmpty()){

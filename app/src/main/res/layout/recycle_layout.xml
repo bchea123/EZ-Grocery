@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,14 +20,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:padding="10dp">
 
             <TextView
                 android:id="@+id/txtItemName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="@string/item_name"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 tools:ignore="RelativeOverlap" />
 
             <TextView
@@ -36,9 +38,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtItemName"
                 android:paddingTop="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="@string/quantity"
-                android:textSize="14sp"
-                />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/txtDescription"
@@ -46,6 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtQuantity"
                 android:paddingTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
                 android:text="@string/item_description"
                 android:textSize="12sp" />
 
