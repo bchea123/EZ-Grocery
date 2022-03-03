@@ -11,33 +11,35 @@
         android:id="@+id/fabAddItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="20dp"
         android:layout_marginBottom="30dp"
         android:clickable="true"
         android:focusable="true"
         app:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtAddItem"
+        app:layout_constraintStart_toStartOf="@+id/txtAddItem"
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="393dp"
-        android:layout_height="518dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintVertical_bias="0.058" />
 
     <TextView
         android:id="@+id/txtAddItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:text="Add Item"
         android:textColor="@android:color/white"
@@ -45,7 +47,7 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/adView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fabAddItem"/>
+        app:layout_constraintTop_toBottomOf="@+id/fabAddItem" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
