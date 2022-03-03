@@ -26,8 +26,9 @@
                 android:id="@+id/txtItemName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Item Name"
-                android:textSize="18sp" />
+                android:text="@string/item_name"
+                android:textSize="18sp"
+                tools:ignore="RelativeOverlap" />
 
             <TextView
                 android:id="@+id/txtQuantity"
@@ -35,8 +36,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtItemName"
                 android:paddingTop="5dp"
-                android:text="Quantity:"
-                android:textSize="14sp" />
+                android:text="@string/quantity"
+                android:textSize="14sp"
+                />
 
             <TextView
                 android:id="@+id/txtDescription"
@@ -44,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtQuantity"
                 android:paddingTop="5dp"
-                android:text="Item Description:"
+                android:text="@string/item_description"
                 android:textSize="12sp" />
 
             <Button
@@ -59,7 +61,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_toLeftOf="@+id/btnDelete"
                 android:background="@android:drawable/ic_menu_edit"
-                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                tools:ignore="RtlHardcoded,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/btnDelete"

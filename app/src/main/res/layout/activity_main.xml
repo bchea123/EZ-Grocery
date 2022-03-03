@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="40dp"
-        android:text="Start Grocery List"
+        android:text="@string/start_grocery_list"
         android:textSize="18sp"
         android:textStyle="italic"
         app:layout_anchor="@id/fabAddItem"
@@ -23,7 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:contentDescription="Add Item" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

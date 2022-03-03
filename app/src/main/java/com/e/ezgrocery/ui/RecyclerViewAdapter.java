@@ -134,13 +134,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     newGroceryItem.setItemQuantity(Integer.parseInt(itemQuantityEdit.getText().toString()));
                     newGroceryItem.setItemDescription(itemDescriptionEdit.getText().toString());
 
-                    if (!itemName.getText().toString().isEmpty()
-                            && !itemQuantity.getText().toString().isEmpty()){
+                    if (!itemName.getText().toString().isEmpty()){
                         db.updateGroceryItem(newGroceryItem);
                         notifyItemChanged(getAdapterPosition(), newGroceryItem);
                     }
                     else{
-                        Snackbar.make(v, "Item field incomplete!", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(v, "Please enter an item name!", Snackbar.LENGTH_SHORT).show();
                     }
 
                     alertDialog.dismiss();
